@@ -33,11 +33,11 @@ public class SwerveDriveWPI {
             );
 
 public void drive(double vx, double vy, double va, double imu){
-    if(Math.abs(va)>0){ // manual offset
+/*    if(Math.abs(va)>0){ // manual offset
         double dx = vx;
         vx = vx * Math.cos(-Math.PI/9) - vy * Math.sin(-Math.PI/9);
         vy = vy * Math.cos(-Math.PI/9) + dx * Math.sin(-Math.PI/9);
-    }
+    }*/
     ChassisSpeeds speeds = ChassisSpeeds.fromFieldRelativeSpeeds(
             vx, vy, va, Rotation2d.fromRadians(imu)
     );
